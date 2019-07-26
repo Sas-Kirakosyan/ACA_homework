@@ -14,7 +14,31 @@ function largerXArr(arr, x){
 	}
 	largerXArr([10, 25, 16, -5, 30, 15, 24] , 16);
 
-//2@ u 3@ chkaroxaca lucel. 
+
+//2
+    function returnEvenNumbers(a, b) {
+        let evenNumbersArray = [];
+     for (let i=a; i <= b; i++) {
+            if (i % 2 === 0) {
+                let digitsArray = i.toString().split("");
+                 // every number is in array like a ['2, '0]
+                if (digitsArray.every(isEven)) { //isEven callback function if two item is even '2' or ' 0'
+					evenNumbersArray.push(i);
+				}if(evenNumbersArray==false){
+					return 'such numbers does not exsist';
+				}
+            }
+        }
+          return evenNumbersArray.join(', ');
+    }
+       function isEven(number) {
+        if (number % 2 === 0) {
+            return true;
+        }
+        return  false;
+    }
+console.log(returnEvenNumbers(19, 42));
+console.log(returnEvenNumbers(99, 199));
 
 	
 	
