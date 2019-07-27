@@ -44,17 +44,17 @@ console.log(returnEvenNumbers(99, 199));
 	
 	
 //4
-//xndir@ lucvac e kisat , uxxaki veradarcnum e  zangvaci min element@
-function minElement(arr){
-	if (arr.length == 1)
-			return arr[0];
-		if (arr[0] < arr[1])
-			arr[1] = arr[0];
-		arr = arr.splice(1);
-		return minElement(arr);
+
+	function elemArr(arr=[], n=Infinity){
+		if(arr.length===0){
+			return n> 0 && n !==Infinity ? n : -1;
+
+		}
+		let d= arr.shift()
+		let arg = d< n && d>=0? d: n;
+		return elemArr(arr,arg);
 	}
-	
-	console.log(minElement([45, -9, 15, 5, -3,  -78]))
+	console.log(elemArr([-9, -4, -4, 3, 3, 4, 5]))
 	
 	
 	
