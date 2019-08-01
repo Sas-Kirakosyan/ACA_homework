@@ -1,3 +1,29 @@
+function removeFirstItem(arr=[], len){
+   let res = []
+    if(arr.length===0 || arr.length ===1){
+        return arr;
+    }
+ len  = arr.length; 
+  res.length = arr.length-1
+  res[0] = arr[1];
+res[len-2] = arr[len];
+
+  
+   res[1] =arr[2];
+   res[2] =arr[3];
+  //  chkaroxaca kazmel argoritm@ return [ arr[1], removeFirstItem([])]
+  }   
+     
+ 
+                         //0   1   2   3
+console.log(removeFirstItem([6, 78, 'n', 0]))
+                             //[78, 'n', 0]
+// arr.lenght = 4               0    1    2
+//res.lenght = 3
+
+
+
+
 
 //2****
 function flatten(arr){
