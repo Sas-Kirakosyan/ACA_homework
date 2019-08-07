@@ -51,7 +51,7 @@ deleteEvenMultArrLength([5, 4, 78, 0, -3, 7])
 function conteinElementOnce(arr){
  return  arr.filter ((item, index) => arr.indexOf(item) >= index);
 };
-console.log(conteinElementOnce([3, 1, 2,  3, 2, 5]))
+conteinElementOnce([3, 1, 2,  3, 2, 5])
 
 //6**
 function multNeighboursElem(arr){
