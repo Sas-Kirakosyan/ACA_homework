@@ -14,15 +14,11 @@ prodOfadjecentElem([3,-3,  6, 7, 12, -1])
 
 //2
 function countMissingNumbers(arr = []){
-    let maxItem = Math.max.apply(null, arr);
-    let minItem = Math.min.apply(null, arr);
-    let tempArr = [];
-for(let i = minItem; i <= maxItem - minItem + 1; i++ ){
-    tempArr.push(i);
+const sortArr = arr.sort((a, b)=> a-b);
+let len =arr.length;
+return sortArr[len-1]-sortArr[0]- len+1;
 }
-     return tempArr.length - arr.length;
-}
-countMissingNumbers([8, 10, 1, 2, 3, 6, ])
+countMissingNumbers([8, 10, 1, 2, 3, 6,12]);
 
 //3
  function convertAcronum(phrase =''){
