@@ -48,7 +48,22 @@ for(let i=0; i<str.length; i++){
 return tempArr.join()
 }
 contiguousSubstrings('3214545454', 4);
-
+//5
+//using foor loop
+function tree(arr){
+  let point = {};
+  let global = {};
+   arr.forEach(item => global[item.id] = {});
+   arr.forEach(item => {
+     if(item.parent === null){
+        point[item.id] = global[item.id]; 
+     }else{
+      global[item.parent][item.id]  = global[item.id]
+     }
+   })
+   return point;
+}
+console.log(tree(arr))
 
 ////6
 var arr = [
