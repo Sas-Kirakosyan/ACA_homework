@@ -50,7 +50,23 @@ if(num >= 100 && num < 1000 && intNumbers[1] >= 2 && intNumbers[2] === '0'){
 }
 spellOutNumber(800);  // I solved this exersize untill 999
 
-
+//2
+function subSets(arr){
+if( arr.length <=3 )return arr;
+let result = [];
+result.push([])
+arr.forEach(function (item){
+  let len = result.length;
+  for(let i=0; i<len; i++){
+    let newArr =result[i].slice(0);
+    newArr.push(item);
+    result.push(newArr)
+  }
+   
+})
+return result.filter(elem => elem.length ===3)
+}
+subSets([5, 9, 23 , 0,-2, -1]);
 
 //3
 function selectCorrectSublist(str, arr){
