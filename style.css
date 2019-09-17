@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+body{
+    background: rgb(245, 132, 151);
+}
+  .container{
+      width: 50%;
+      margin: 5%;
+      
+  }
+ #addList{
+      font-size: 30px;
+      color: white;
+      background: blue;
+      border-radius: 2px;
+      cursor: pointer;
+  }
+
+  button:hover{
+    background: rgb(137, 137, 226);   
+  }
+
+  .inputContainer{
+      /* display: flex; */
+      font-size: 30px;
+}
+ #ul{
+    margin:0;
+    padding: 0;
+}
+
+ul li {
+  background: rgb(222, 222, 235);
+    list-style-type: none;
+   display: flex;
+   justify-content: space-between;
+     margin-top: 1px;
+     padding-top: 6px;
+     padding-bottom:6px;
+    cursor: pointer;
+     width: 457px;
+    
+}
+li{
+    padding: 10px;
+}
+li:hover{
+    background:  rgba(125, 125, 168, 0.795);
+}
+
+
+input.listfeaid{
+font-size: 30px;
+}
+
+
+
+.checked{
+background: rgba(125, 125, 168, 0.795);
+}
+
+.line{
+    text-decoration: line-through;
+}
+
+
+ .closer{
+    color: red;
+}
+
+
+.closer:hover{
+    background: blue;
+   color: wheat;
+}
+
+
+
