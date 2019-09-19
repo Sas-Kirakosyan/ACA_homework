@@ -70,20 +70,28 @@ console.log(sumOfDigits(999999999999))
 
 
 //4**
- function invert(obj) {
-   var result = {};
-
-  for (var key in obj) {
-    if(obj.hasOwnProperty(obj[key])) {
-        [].push(key)
-    
+const invertObjectKeysValues = InputObj => {
+    const outputObj = {};
+    debugger;
+    for (let key in InputObj) {
+      if (InputObj.hasOwnProperty(key)) {
+        if (!outputObj[InputObj[key]]) {
+          outputObj[InputObj[key]] = key;
+          
+        } else {
+          if (!Array.isArray(outputObj[InputObj[key]])) {
+            
+            outputObj[InputObj[key]] = [outputObj[InputObj[key]]];
+            
+          }
+          outputObj[InputObj[key]].push(key);
+        
+        }
+      }
     }
-    result[obj[key]] = key
- }
-
-  return result;
-}
-console.log(invert({a:'1', b:'2', c: '2'}))
+    return outputObj;
+  }
+  console.log(invertObjectKeysValues({ a: '1', b: '2', c: '2', d: '2' }));
 
 
 
