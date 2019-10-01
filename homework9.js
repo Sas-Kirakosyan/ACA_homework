@@ -169,7 +169,7 @@ class Student extends Person{
     }
     passExam(program, grade){
        if(grade>=50){
-           this._year++;//   I am dont understend 
+           this._year++;//   I dont understend 
            //the requirment the exersize???
        } 
     }
